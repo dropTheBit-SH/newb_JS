@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.gallery{
+            margin: 5px;
+            border: 1px solid;
+            float: left;
+            width: 150px;
+        }
+
+        div.gallery:hover{
+            border: 10px solid #777;
+        }
+
+        div.gallery img{
+            width: 100%;
+        }
+
+        div.description{
+            padding: 15px;
+            text-align: center;
+        }
+
+        table{
+            width: 100%;
+            border: 3px solid;
+            display: inline-block;
+            background-color: lightblue;
+        }
+
+        tr:nth-child{
+            width: 100%;
+            background-color: lightsteelblue;
+        }
+
+        tr:hover{
+            background-color: lightcoral;
+        }
+
+        div.menu{
+            background-color: rgb(47, 172, 255);
+            padding: 14px 25px;
+            font-size: 20px;
+            text-align: center;
+            display: block;
+        }
+
+        div.menu:hover{
+            background-color: royalblue;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+</head>
+<body>
+
+    <div class="menu">
+       <strong>요소1</strong>
+    </div>
+    <div class="menu">
+       <strong>요소2</strong>
+    </div>
+    <div class="menu">
+       <strong>요소3</strong>
+    </div>
+    <div class="gallery">
+        <a target="_blank" href="1.jpg">
+            <img src="1.jpg" alt="pic1" width="500" height="200">
+        </a>
+        <div class="description">사진1</div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="2.jpg">
+            <img src="2.jpg" alt="pic2" width="500" height="200">
+        </a>
+        <div class="description">사진2</div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="3.jpg">
+            <img src="3.jpg" alt="pic3" width="500" height="200">
+        </a>
+        <div class="description"><i class="glyphicon glyphicon-cloud" style="font-size:15px;color:red;"></i></div>
+    </div>
+
+    <table class="table">
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+          </tr>
+          <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+          </tr>
+          <tr>
+            <td>Berglunds snabbköp</td>
+            <td>Christina Berglund</td>
+            <td>Sweden</td>
+          </tr>
+          <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+          </tr>
+          <tr>
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
+            <td>Austria</td>
+          </tr>
+          <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+          </tr>
+          <tr>
+            <td>Königlich Essen</td>
+            <td>Philip Cramer</td>
+            <td>Germany</td>
+          </tr>
+          <tr>
+            <td>Laughing Bacchus Winecellars</td>
+            <td>Yoshi Tannamuri</td>
+            <td>Canada</td>
+          </tr>
+          <tr>
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Giovanni Rovelli</td>
+            <td>Italy</td>
+          </tr>
+          <tr>
+            <td>North/South</td>
+            <td>Simon Crowther</td>
+            <td>UK</td>
+          </tr>
+          <tr>
+            <td>Paris spécialités</td>
+            <td>Marie Bertrand</td>
+            <td>France</td>
+          </tr>
+    </table>
+</body>
+</html>

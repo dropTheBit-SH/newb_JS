@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Page</title>
+
+    <style>
+        .header{
+            background-color: lightblue;
+            text-align: center;
+            padding: 30px;
+        }
+
+        div.menu{
+            background-color: lightgray;
+            text-align: center;
+            padding: 10px;
+            
+        }
+
+        .floating-box{
+            display: inline-block;
+            width: 150px;
+            height: 74;
+            margin: 10px;
+            border: 5px solid;
+        }
+
+        .top{
+            padding: 70px 0;
+            border: 3px solid black;
+            text-align: center;
+        }
+        .center{
+            line-height: 200px;
+            height: 200px;
+            border: 3px solid beige;
+            text-align: center;
+        }
+
+        .center p{
+            line-height: 1.5;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .bottom{
+            margin:auto;
+            width: 50%;
+            border: 3px solid darkgrey;
+            padding: 10px;
+        }
+
+        table{
+            background-color: cadetblue;
+            width: 100%;
+            min-width: 50px;
+            padding: 5px;
+        }
+        a[href$=html]{
+            text-decoration: none;
+            color: white;
+            size: 40px;
+        }
+        p::selection{
+            background-color: crimson;
+        }
+        
+        strong::before, strong::after{
+            content: " 〓 ";
+        }
+    </style>
+</head>
+<body>
+
+    <!-- a[href="?$"]*3 -->
+
+    <button class="accordion">Section 1</button>
+    <div class="panel">
+    <p>PHOTO</p>
+    </div>
+
+    <button class="accordion">Section 2</button>
+    <div class="panel">
+    <p>TABLE</p>
+    </div>
+
+    <button class="accordion">Section 3</button>
+    <div class="panel">
+    <p>floating-box</p>
+    <div class="floating-box">floating-box1</div>
+    <div class="floating-box">floating-box2</div>
+    <div class="floating-box">floating-box3</div>
+    <div class="floating-box">floating-box4</div>
+    <div class="floating-box">floating-box5</div>
+    <div class="floating-box">floating-box6</div>
+    <div class="floating-box">floating-box7</div>
+    <div class="floating-box">floating-box8</div>
+    <div class="floating-box">floating-box9</div>
+    <div class="floating-box">floating-box10</div>
+    </div>
+
+    <div class="menu">
+        <strong>LAYOUT</strong>
+    </div>
+
+    <div class="center">
+        <p>
+            테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 테스트입니다. 
+        </p>
+    </div>
+
+
+</body>
+</html>
