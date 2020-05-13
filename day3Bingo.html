@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table{
+      border: 3px solid;
+      width: 300px;
+      height: 300px;
+    }
+    tr, td{
+      border: 3px solid;
+      text-align:  center;
+      font-size: 20px;
+    }
+    td:hover{
+      background-color: lightpink;
+    }
+    
+  </style>
+</head>
+<body>
+  
+<script>
+// 입력과 출력을 먼저 처리한다
+// 방법을 모르겠다면 일단 하드코딩한다
+
+  // 1 5x5배열 생성 (작업:1)
+  var bingoArr = [];
+  for(i=0;i<5;i++)
+    bingoArr[i] = new Array(5);
+  // 2 1~25 저장
+  for(i=0;i<5;i++){
+    for(j=0;j<5;j++)
+      bingoArr[i][j] = (i*5)+j+1;
+  }
+  // 3 shuffle
+
+  // 1번 방법 : 잘 섞이지 않는다..
+    // for(k=0;k<5;k++)
+    // bingoArr.sort(function(a,b) {return Math.random()-0.5});
+    // for(i=0;i<5;i++)
+    // bingoArr[i].sort(function(a,b) {return Math.random()-0.5});
+
+  // 2번 방법 : 자바 방식★
+    for(i=0;i<5;i++){
+        for(j=0;j<5;j++){
+        x = parseInt(Math.random()*5); //Math.floor(): 반올림
+        y = parseInt(Math.random()*5);
+        tmp = bingoArr[i][j];
+        bingoArr[i][j] = bingoArr[x][y];
+        bingoArr[x][y] = tmp;
+        }
+    }
+
+  // 3번 방법 : 1차원 배열을 섞어서 2차원으로 출력
+    // var num = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25];
+    // num.sort((a,b)=>Math.random()-0.5);
+    // var cnt = 0;
+    // for(i=0;i<5;i++){
+    //     for(j=0;j<5;j++)
+    //         bingoArr[i][j] = num[cnt++];
+    // }
+
+ // 4번 방법 : 세련된 방식
+    for(i=0;i<25;i++)
+        bingoArr[Math.floor(i/5)][Math.floor(i%5)] = i;
+    
+// 4 table로 출력 (작업:2)
+    document.write("<table border=1px>");
+    for(i=0;i<5;i++){
+        document.write("<tr>");
+        for(j=0;j<5;j++){
+            document.write("<td>");
+            document.write(bingoArr[i][j]);
+            document.write("</td>");
+        }
+        document.write("</tr>");
+    }
+    document.write("</table>");
+</script>  
+</body>
+</html>
