@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            color: black;
+            font-size: 20px;
+        }
+        table{
+            width: 100%;
+        }
+        tr{
+            width: 100%;
+            height: 50%;
+        }
+        td{
+            width: 50%;
+            height: 300px;
+            align-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="h" style="text-align: center;"> 삽질 1 </header>
+    <p></p>
+    <table>
+        <tr>
+            <!-- 1. 축구, 농구, 야구, 탁구, 배구 체크박스를 만든다 -->
+            <td>
+                <p></p>
+                <input type="checkbox" value="전체"><label for="cb1">전체</label></br></br>
+                <input type="checkbox" value="축구"><label for="cb1">축구</label></br></br>
+                <input type="checkbox" value="농구"><label for="cb2">농구</label></br></br>
+                <input type="checkbox" value="야구"><label for="cb3">야구</label></br></br>
+                <input type="checkbox" value="탁구"><label for="cb4">탁구</label></br></br>
+                <input type="checkbox" value="배구"><label for="cb5">배구</label></br></br>
+            </td>
+            <!-- 2. 텍스트구역에 선택된 체크박스의 내용을 보여준다 -->
+            <td>
+                <textarea name="ta" id="ta" cols="30" rows="10"></textarea>
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+
+    // 3. 1번의 체크박스가 2번의 텍스트구역에 내용을 보내는 이벤트를 발생시킨다
+    window.onload = function(){
+        var tArr = document.getElementsByTagName("input");
+        var tmpArr = new Array;
+        
+        tArr[0].onclick = function(){
+            if(tArr[0].checked){
+                tmpArr.push("!");
+            }else{
+                tmpArr.pop("!");
+            }
+            ta.value = tmpArr.toString; 
+        }
+
+        // tArr[0].onclick = function(){
+        //     if(tArr[0].checked){
+        //         tmpArr.push(tArr[0].name);
+        //     }else{
+        //         tmpArr.pop(tArr[0].name);
+        //     }
+        //     ta.value = tmpArr.toString;
+        // }
+
+        // for(let i=0;i<tArr.length; i++){
+        //     tArr[i].onclick = function(){
+        //         if(tArr[i].checked){
+        //             tmp = ta.value;
+        //             ta.value = ta.value + tArr[i].value;
+        //         }else{
+        //             ta.value = tmp; 
+        //         }
+        //     }
+        // }
+
+        // for(let i=0;i<tArr.length; i++){
+        //     tArr[i].onclick = function(){
+        //         if(tArr[i].checked){
+        //             tmpArr.push(tArr[i].name);
+        //             console.log(tArr[i].name);
+        //         }else{
+        //             tmpArr.pop(tArr[i].name);
+        //         }
+        //         ta.value = tmpArr.toString();
+        //     }
+        // }
+    }
+   
+</script>
+</html>
