@@ -50,51 +50,35 @@
 <script>
 
     // 3. 1번의 체크박스가 2번의 텍스트구역에 내용을 보내는 이벤트를 발생시킨다
+    var tArr = document.getElementsByTagName("input"); 
     window.onload = function(){
-        var tArr = document.getElementsByTagName("input");
-        var tmpArr = new Array;
-        
         tArr[0].onclick = function(){
-            if(tArr[0].checked){
-                tmpArr.push("!");
-            }else{
-                tmpArr.pop("!");
-            }
-            ta.value = tmpArr.toString; 
+            selectAll();
         }
-
-        // tArr[0].onclick = function(){
-        //     if(tArr[0].checked){
-        //         tmpArr.push(tArr[0].name);
-        //     }else{
-        //         tmpArr.pop(tArr[0].name);
-        //     }
-        //     ta.value = tmpArr.toString;
-        // }
-
-        // for(let i=0;i<tArr.length; i++){
-        //     tArr[i].onclick = function(){
-        //         if(tArr[i].checked){
-        //             tmp = ta.value;
-        //             ta.value = ta.value + tArr[i].value;
-        //         }else{
-        //             ta.value = tmp; 
-        //         }
-        //     }
-        // }
-
-        // for(let i=0;i<tArr.length; i++){
-        //     tArr[i].onclick = function(){
-        //         if(tArr[i].checked){
-        //             tmpArr.push(tArr[i].name);
-        //             console.log(tArr[i].name);
-        //         }else{
-        //             tmpArr.pop(tArr[i].name);
-        //         }
-        //         ta.value = tmpArr.toString();
-        //     }
-        // }
+        window.onclick = function(){
+            var result = checkVal();
+            ta.value = result;
+        }
     }
-   
+
+    function selectAll(){ //전체 체크박스를 선택했을 때 다른 체크박스들의 상태 바꾸기
+        if(tArr[0].checked){
+            for(i=1;i<tArr.length;i++) tArr[i].checked = true;
+        }else{
+            for(i=1;i<tArr.length;i++) tArr[i].checked = false;
+        }
+    }
+
+    function checkVal(){ //선택된 체크박스 값 확인하기
+        var tmp = new Array;
+        for(i=1;i<tArr.length;i++){
+            if(tArr[i].checked){
+                tmp.push(tArr[i].value);
+                console.log(tArr[i].value);
+            }
+        }
+        return tmp;
+    }
+        
 </script>
 </html>
