@@ -53,11 +53,11 @@
     var tArr = document.getElementsByTagName("input"); 
     window.onload = function(){
         tArr[0].onclick = function(){
-            selectAll();
+            selectAll(); 
         }
         window.onclick = function(){
-            var result = checkVal();
-            ta.value = result;
+            var result = checkVal(); //checkVal메소드를 통해 체크박스 값 확인
+            ta.value = result; //출력하기
         }
     }
 
@@ -72,10 +72,7 @@
     function checkVal(){ //선택된 체크박스 값 확인하기
         var tmp = new Array;
         for(i=1;i<tArr.length;i++){
-            if(tArr[i].checked){
-                tmp.push(tArr[i].value);
-                console.log(tArr[i].value);
-            }
+            if(tArr[i].checked) tmp.push(tArr[i].value);
         }
         return tmp;
     }
